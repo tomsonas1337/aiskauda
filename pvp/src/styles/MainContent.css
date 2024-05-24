@@ -1,0 +1,129 @@
+/* MainContent.css */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #2f4469;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 100px;
+  padding: 20px;
+  background: #2f4469;
+}
+
+.text-and-list {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.text-and-list h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.text-and-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.text-and-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: white;
+}
+
+.text-and-list li img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.text-and-list button {
+  padding: 10px 20px;
+  background-color: #2f4469;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.text-and-list button:hover {
+  background-color: #947c2c;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.services {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #2f4469;
+}
+
+.service, .service-link {
+  flex: 1;
+  text-align: center;
+}
+
+.service img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.service p, .service-link p {
+  font-size: 16px;
+  color: white;
+}
+
+.service-link p {
+  color: #0084ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.service-link p:hover {
+  color: #0056b3;
+}
+
+/* Desktop specific borders */
+.service:not(:last-child) {
+  border-right: 2px solid #ffffff; /* Adds a white border to the right of each service except the last one */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service, .service-link {
+    width: 100%; /* Ensures full width usage */
+    border-right: none !important; /* Force removes any vertical border */
+    border-bottom: none; /* Resets any bottom border */
+  }
+
+  .service:not(:last-child), .service-link:not(:last-child) {
+    border-bottom: 2px solid #ffffff; /* Adds a horizontal border below each service */
+  }
+
+  .service img {
+    width: 60px; /* Optionally adjust image size for mobile */
+    height: 60px;
+  }
+}

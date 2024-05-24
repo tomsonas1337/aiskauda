@@ -1,0 +1,35 @@
+.exercise-page {
+    flex-grow: 1; /* Makes this section grow to use up available space */
+    padding: 50px 20px;
+  }
+  
+  .article-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    margin-top: 20px;
+  }
+  
+  .article {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #333;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Spacing between articles */
+  }
+  
+  .article img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .article h2 {
+    font-size: 16px;
+  }
+  
+  .article a {
+    color: orange;
+    text-decoration: none;
+  }

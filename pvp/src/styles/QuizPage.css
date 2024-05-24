@@ -1,0 +1,80 @@
+.quiz-page {
+  flex-grow: 1; /* Makes this section grow to use up available space */
+  padding: 50px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  position: relative;
+  z-index: 0; /* Ensure it stays below the navbar */
+}
+
+.result-page {
+  padding: 50px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  position: relative;
+  z-index: 0; /* Ensure it stays below the navbar */
+}
+
+.quiz-page form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+.quiz-page ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+  width: 100%; /* Ensure the list takes up the full width */
+}
+
+.quiz-page li {
+  margin-bottom: 20px; /* Add space between questions */
+  display: flex;
+  flex-direction: column; /* Stack question and buttons vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.quiz-page .question {
+  margin-bottom: 10px; /* Space between question text and buttons */
+  text-align: center;
+}
+
+.quiz-page .button-group {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+}
+
+.quiz-page .answer-button {
+  padding: 5px 10px;
+  margin: 0 5px; /* Space between buttons */
+  color: white;
+  background-color: #2f4469; /* Bootstrap-like blue */
+  border: 2px solid #1b2c44; /* Darker blue border */
+  border-radius: 4px; /* Optional: Add rounded corners */
+  cursor: pointer;
+}
+
+.quiz-page .selected {
+  background-color: #86d786; /* Softer green for selected */
+}
+
+.quiz-page .submit-button {
+  padding: 10px 20px;
+  background-color: #ccc; /* Grey color for the disabled state */
+  color: white;
+  border: none;
+  cursor: not-allowed;
+  margin-top: 20px; /* Space above the submit button */
+  align-self: center; /* Center the submit button */
+}
+
+.quiz-page .submit-button:not(:disabled) {
+  background-color: orange; /* Brighter color when active */
+  cursor: pointer;
+}

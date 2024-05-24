@@ -1,0 +1,9 @@
+.footer {
+  background-color: #002244; /* Dark blue background */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative; /* Ensure it's positioned correctly in the layout */
+  bottom: 0; /* Stick to the bottom */
+}

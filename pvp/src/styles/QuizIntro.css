@@ -1,0 +1,62 @@
+/* src/styles/QuizIntro.css */
+.quiz-intro {
+    background-color: #2f4469; /* Dark blue background */
+    color: white; /* White text color */
+    padding: 50px 20px; /* Padding around the content */
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    align-items: center; /* Center align content */
+    text-align: center; /* Center align text */
+  }
+  
+  .quiz-intro-header {
+    margin-bottom: 20px; /* Space below the header */
+  }
+  
+  .quiz-intro-header h1 {
+    font-size: 48px; /* Font size for the main heading */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+  
+  .quiz-intro-header h2 {
+    font-size: 36px; /* Font size for the subheading */
+    color: #FFA500; /* Orange text color for subheading */
+  }
+  
+  .quiz-intro-content {
+    max-width: 800px; /* Limit the maximum width of the content */
+    margin-bottom: 40px; /* Space below the content */
+  }
+  
+  .quiz-intro-content p {
+    font-size: 24px; /* Font size for the paragraph */
+    margin-bottom: 40px; /* Space below the paragraph */
+  }
+  
+  .quiz-intro-footer {
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .quiz-intro-image {
+    margin-right: 20px; /* Space between image and button */
+  }
+  
+  .quiz-intro-image img {
+    width: 200px; /* Set the image width */
+    height: 200px; /* Set the image height */
+  }
+  
+  .start-button {
+    background-color: #FFA500; /* Orange button */
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Button padding */
+    cursor: pointer;
+    font-size: 18px; /* Font size for the button text */
+    text-transform: uppercase; /* Uppercase button text */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Space above the button */
+  }
+  

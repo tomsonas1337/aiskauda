@@ -1,0 +1,79 @@
+.navbar {
+  background-color: #002244; /* Slightly darker blue for the navbar */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  position: fixed; /* Fixed position to make it stay at the top */
+  top: 0; /* Position at the very top */
+  left: 0;
+  z-index: 1000; /* Ensure that the navbar stays on top */
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between; /* Distributes space between links */
+  align-items: center;
+}
+
+.nav-items a, .nav-items button {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px; /* Adds space between the nav items */
+  padding: 10px 20px; /* Adjusted to match main content button */
+}
+
+.nav-items button {
+  background-color: #2f4469; /* Changed to match the main content button color */
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Standard font size for consistency */
+}
+
+.nav-items button:hover {
+  background-color: #947c2c; /* Keeps the button color consistent on hover, no change */
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: fixed;
+  right: 20px; /* You might want to decrease this if the menu is too far off to the right */
+  top: 10px;
+  z-index: 2000;
+}
+
+@media (max-width: 768px) {
+  .nav-items {
+    position: fixed;
+    top: 60px; /* Check if this needs adjustment based on the navbar height */
+    right: 0; /* This should align it right to the edge of the viewport */
+    width: 100%; /* This might need adjustment based on how you want to display the menu */
+    background-color: #002244;
+    display: none; /* Starts as hidden */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+    z-index: 1500;
+  }
+
+  .nav-items.open {
+    display: flex;
+  }
+
+  .nav-items a, .nav-items button {
+    margin-left: 0; /* Resets left margin in mobile view */
+    margin: 10px 20px; /* Standardizes margin for a cleaner look */
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
