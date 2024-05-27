@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import '../styles/QuizPage.css';
 
 const questions = [
-  "Ar pastebite nelygumą pečių aukštyje žiūrėdami į veidrodį?",
-  "Ar matote akivaizdų išlinkimą nugaros srityje pasilenkus?",
-  "Ar jaučiate nugaros skausmą, ypač vienoje kūno pusėje?",
-  "Ar jūsų drabužiai dėvisi nevienodai vienoje kūno pusėje lyginant su kita?",
-  "Ar pastebėjote, kad vienas klubas atrodo aukštesnis nei kitas?",
-  "Ar pastebite simetrijos trūkumą juosmens srityje?",
-  "Ar jaučiate standumą ar diskomfortą nugaroje, ypač po ilgo sėdėjimo ar stovėjimo?",
-  "Ar pastebėjote pokyčius savo laikysenoje, pvz., polinkį į vieną pusę?",
-  "Ar turite šeimos narių, kurie turi diagnozuotą skoliozę?",
-  "Ar neseniai patyrėte greitą ūgio augimą ar pastebėjote pokyčius savo kūno proporcijose?"
+  { question: "Ar pastebite nelygumą pečių aukštyje žiūrėdami į veidrodį?", score: 10 },
+  { question: "Ar matote akivaizdų išlinkimą nugaros srityje pasilenkus?", score: 20 },
+  { question: "Ar jaučiate nugaros skausmą, ypač vienoje kūno pusėje?", score: 15 },
+  { question: "Ar jūsų drabužiai dėvisi nevienodai vienoje kūno pusėje lyginant su kita?", score: 5 },
+  { question: "Ar pastebėjote, kad vienas klubas atrodo aukštesnis nei kitas?", score: 10 },
+  { question: "Ar pastebite simetrijos trūkumą juosmens srityje?", score: 10 },
+  { question: "Ar jaučiate standumą ar diskomfortą nugaroje, ypač po ilgo sėdėjimo ar stovėjimo?", score: 15 },
+  { question: "Ar pastebėjote pokyčius savo laikysenoje, pvz., polinkį į vieną pusę?", score: 10 },
+  { question: "Ar turite šeimos narių, kurie turi diagnozuotą skoliozę?", score: 15 },
+  { question: "Ar neseniai patyrėte greitą ūgio augimą ar pastebėjote pokyčius savo kūno proporcijose?", score: 20 }
 ];
 
 function QuizPage() {
@@ -31,7 +31,7 @@ function QuizPage() {
   };
 
   const calculateScore = () => {
-    return answers.reduce((acc, curr) => acc + (curr === 'yes' ? 10 : 5), 0);
+    return answers.reduce((acc, curr, index) => acc + (curr === 'yes' ? questions[index].score : 0), 0);
   };
 
   const handleSubmit = (event) => {
@@ -46,7 +46,7 @@ function QuizPage() {
     return (
       <div className="result-page">
         <h1>Rezultatas:</h1>
-        <p>Dainoros kvailumas: {score}%</p>
+        <p>Taškai: {score}</p>
       </div>
     );
   }
@@ -56,9 +56,9 @@ function QuizPage() {
       <h1>Skoliozės tikrinimo klausimynas</h1>
       <form onSubmit={handleSubmit}>
         <ul>
-          {questions.map((question, index) => (
+          {questions.map((item, index) => (
             <li key={index}>
-              <div className="question">{question}</div>
+              <div className="question">{item.question}</div>
               <div className="button-group">
                 <button
                   type="button"
