@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import '../styles/ArticlesPage.css'; // Ensure the CSS file path is correct
 
+// Importing images
+import image1 from '../assets/image1.jpg';
+import image2 from '../assets/image2.jpg';
+import image3 from '../assets/image3.jpg';
 function ArticlesPage() {
   const [selectedArticle, setSelectedArticle] = useState(null);
 
@@ -8,6 +13,7 @@ function ArticlesPage() {
     {
       title: 'Skoliozė: Simptomai ir gydymas',
       summary: 'Supraskite skoliozės simptomus ir įvairius gydymo būdus.',
+      image: image1,
       content: `<h3>Skoliozė: Simptomai ir gydymas</h3>
                 <p>Skoliozė yra medicininė būklė, kai žmogaus stuburas turi šoninį išlinkimą. Kreivė paprastai yra "S" arba "C" formos. Kreivumo laipsnis gali skirtis, tačiau daugiau nei 10 laipsnių kreivumas paprastai laikomas skolioze.</p>
                 <h4>Simptomai</h4>
@@ -30,6 +36,7 @@ function ArticlesPage() {
     {
       title: 'Laikysena ir nugaros sveikata',
       summary: 'Sužinokite, kaip gera laikysena gali užkirsti kelią nugaros problemoms.',
+      image: image2,
       content: `<h3>Laikysena ir nugaros sveikata</h3>
                 <p>Gera laikysena yra būtina norint išlaikyti sveiką nugarą ir išvengti skausmo. Tinkamas kūno išlyginimas sumažina stuburo apkrovą ir sumažina sužalojimų riziką.</p>
                 <h4>Geros laikysenos svarba</h4>
@@ -52,6 +59,7 @@ function ArticlesPage() {
     {
       title: 'Pratimai sveikam stuburui',
       summary: 'Paprasti pratimai, skirti sustiprinti stuburą ir sumažinti skausmą.',
+      image: image3,
       content: `<h3>Pratimai sveikam stuburui</h3>
                 <p>Reguliarūs pratimai yra svarbūs norint išlaikyti sveiką stuburą ir sumažinti nugaros skausmą. Raumenų, palaikančių stuburą, stiprinimas, lankstumo gerinimas ir sveiko svorio palaikymas gali prisidėti prie stuburo sveikatos.</p>
                 <h4>Rekomenduojami pratimai</h4>
@@ -69,7 +77,13 @@ function ArticlesPage() {
   ];
 
   return (
-    <div className="articles">
+    <motion.div
+      initial={{ opacity: 0, x: '-100vw' }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: '100vw' }}
+      transition={{ type: 'tween', ease: 'anticipate', duration: 0.3 }}
+      className="articles"
+    >
       <h1>Sveikatos Straipsniai</h1>
       {selectedArticle ? (
         <div className="article-content">
@@ -80,13 +94,14 @@ function ArticlesPage() {
         <div className="articles-container">
           {articles.map((article, index) => (
             <div key={index} className="article-card" onClick={() => setSelectedArticle(article)}>
+              <img src={article.image} alt={article.title} className="article-image" />
               <h2>{article.title}</h2>
               <p>{article.summary}</p>
             </div>
           ))}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
