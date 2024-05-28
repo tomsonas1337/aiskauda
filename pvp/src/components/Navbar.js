@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'; // Adjust the path based on where your image is within the src directory
@@ -24,6 +25,7 @@ function Navbar() {
         <Link to="/articles" onClick={closeMobileMenu}>Straipsniai</Link>
         <Link to="/exercises" onClick={closeMobileMenu}>Mankštos</Link>
         <a href="https://www.motusvita.lt/" onClick={closeMobileMenu} target="_blank" rel="noopener noreferrer">Motus Vita</a> 
+        <Link to="/about" onClick={closeMobileMenu}>Apie Mus</Link>
         <Link to="/contacts" onClick={closeMobileMenu}>Kontaktai</Link>
         <Link to="/quiz-intro" className="nav-button-link" onClick={closeMobileMenu}>
           <button>Testas</button>

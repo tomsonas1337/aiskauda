@@ -45,8 +45,17 @@ function QuizPage() {
   if (submitted) {
     return (
       <div className="result-page">
-        <h1>Rezultatas:</h1>
-        <p>Taškai: {score}</p>
+        <h1 className="result-title">Rezultatas:</h1>
+        <p className="result-score">Taškai: {score}</p>
+        {score <= 45 && (
+          <p className="result-text">Norėdami geriau prižiūrėti savo nugarą, apsvarstykite galimybę išlaikyti gerą laikyseną, reguliariai mankštintis ir vengti ilgalaikio sėdėjimo ar stovėjimo.</p>
+        )}
+        {score > 45 && score <= 90 && (
+          <p className="result-text">Manome, kad jums būtų naudinga išbandyti pratimus nugarai. Siūlome apsilankyti mūsų <a href="/exercises" className="result-link">mankštų puslapyje</a>.</p>
+        )}
+        {score > 90 && (
+          <p className="result-text">Labai rekomenduojame apsilankyti <a href="https://www.motusvita.lt">Motus Vita</a> svetainėje konsultacijai su profesionaliais kineziterapeutais.</p>
+        )}
       </div>
     );
   }

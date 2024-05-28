@@ -4,30 +4,26 @@ import '../styles/ContactsPage.css'; // Ensure the CSS file path is correct
 function ContactsPage() {
   return (
     <div className="contacts-page">
-      <h1>Contact Us</h1>
+      <h1>Susisiekite su mumis</h1>
       <div className="contact-info">
-        <h2>Our Office</h2>
-        <p>1234 Health St., Wellness City, HC 12345</p>
-        <h2>Email</h2>
-        <p>info@healthcare.com</p>
-        <h2>Phone</h2>
-        <p>(123) 456-7890</p>
+        <h2>Mūsų biuras</h2>
+        <p>A. Mickevičiaus g. 37, Kaunas, 44244 Kauno m. sav. 110a-110b kab.</p>
       </div>
       <form className="contact-form">
-        <h2>Send Us a Message</h2>
+        <h2>Parašykite mums žinutę</h2>
         <label>
-          Name:
+          Vardas:
           <input type="text" name="name" required />
         </label>
         <label>
-          Email:
+          El. paštas:
           <input type="email" name="email" required />
         </label>
         <label>
-          Message:
+          Žinutė:
           <textarea name="message" required />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit">Siųsti</button>
       </form>
     </div>
   );

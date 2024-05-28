@@ -11,6 +11,7 @@
 
 .result-page {
   padding: 50px 20px;
+  margin-top: 200px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -77,4 +78,26 @@
 .quiz-page .submit-button:not(:disabled) {
   background-color: orange; /* Brighter color when active */
   cursor: pointer;
+}
+
+/* Result Page Styles */
+.result-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.result-score {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.result-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.result-link {
+  font-size: 1em;
+  color: blue;
+  text-decoration: underline;
 }

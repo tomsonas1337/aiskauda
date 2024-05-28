@@ -84,7 +84,7 @@ function ArticlesPage() {
 
   return (
     <div className="articles">
-      <h1>Sveikatos Straipsniai</h1>
+      <h1>Straipsniai</h1>
       <div className="articles-container">
         {articles.map((article, index) => (
           <div key={index} className="article-card" onClick={() => setSelectedArticle(article)}>
