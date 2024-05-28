@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import '../styles/ArticlesPage.css'; // Ensure the CSS file path is correct
 
 // Importing images
 import image1 from '../assets/image1.jpg';
 import image2 from '../assets/image2.jpg';
 import image3 from '../assets/image3.jpg';
+
 function ArticlesPage() {
   const [selectedArticle, setSelectedArticle] = useState(null);
 
@@ -76,32 +76,34 @@ function ArticlesPage() {
     }
   ];
 
+  const handleCloseModal = (e) => {
+    if (e.target.classList.contains('modal')) {
+      setSelectedArticle(null);
+    }
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0, x: '-100vw' }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: '100vw' }}
-      transition={{ type: 'tween', ease: 'anticipate', duration: 0.3 }}
-      className="articles"
-    >
+    <div className="articles">
       <h1>Sveikatos Straipsniai</h1>
-      {selectedArticle ? (
-        <div className="article-content">
-          <button className="button-back" onClick={() => setSelectedArticle(null)}>Atgal į Straipsnius</button>
-          <div dangerouslySetInnerHTML={{ __html: selectedArticle.content }} />
-        </div>
-      ) : (
-        <div className="articles-container">
-          {articles.map((article, index) => (
-            <div key={index} className="article-card" onClick={() => setSelectedArticle(article)}>
-              <img src={article.image} alt={article.title} className="article-image" />
-              <h2>{article.title}</h2>
-              <p>{article.summary}</p>
-            </div>
-          ))}
+      <div className="articles-container">
+        {articles.map((article, index) => (
+          <div key={index} className="article-card" onClick={() => setSelectedArticle(article)}>
+            <img src={article.image} alt={article.title} className="article-image" />
+            <h2>{article.title}</h2>
+            <p>{article.summary}</p>
+          </div>
+        ))}
+      </div>
+      {selectedArticle && (
+        <div className="modal" onClick={handleCloseModal}>
+          <div className="modal-content">
+            <span className="close" onClick={() => setSelectedArticle(null)}>&times;</span>
+            <img src={selectedArticle.image} alt={selectedArticle.title} className="modal-image" />
+            <div dangerouslySetInnerHTML={{ __html: selectedArticle.content }} className="modal-article-content" />
+          </div>
         </div>
       )}
-    </motion.div>
+    </div>
   );
 }
 

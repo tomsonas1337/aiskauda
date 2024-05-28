@@ -8,6 +8,7 @@ import QuizPage from './components/QuizPage';
 import QuizIntro from './components/QuizIntro';
 import Footer from './components/Footer';
 import ArticlesPage from './components/ArticlesPage';
+import ContactsPage from './components/ContactsPage';
 import './styles/Global.css';
 
 function AnimatedRoutes() {
@@ -24,11 +25,12 @@ function AnimatedRoutes() {
         style={{ position: 'relative', width: '100%' }}
       >
         <Routes location={location}>
-        <Route path="/articles" element={<ArticlesPage />} />
           <Route path="/" element={<MainContent />} />
           <Route path="/exercises" element={<ExercisePage />} />
           <Route path="/quiz" element={<QuizPage />} />
           <Route path="/quiz-intro" element={<QuizIntro />} />
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/contacts" element={<ContactsPage />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
