@@ -13,9 +13,8 @@ function QuizIntro() {
       <div className="quiz-intro-content">
         <p>
           Šiame teste matysite gydytojų specialistų užduodamus klausimus konsultacijose.
-          Rezultatai bus parodomi testo pabaigoje, Jums užpildžius visus klausimus. Vėliau turėsite
-          galimybę registruotis pas pasirinktą gydytoją specialistą, pasirinkti norimas mankštas arba
-          papildomą informaciją apie Jūsų GALIMĄ diagnozę.
+          Jums atlikus testą ir užpildžius visus klausimus, bus rodomi rezultatai apie Jūsų GALIMĄ diagnozę.
+          Galėsite rinktis registraciją pas pasirinktą gydytoją specialistą bei pasirinkti norimas mankštas.
         </p>
       </div>
       <div className="quiz-intro-footer">
@@ -25,7 +24,7 @@ function QuizIntro() {
       </div>
       <Link to="/quiz">
           <button className="start-button">Pradėti</button>
-        </Link>
+      </Link>
     </div>
   );
 }
