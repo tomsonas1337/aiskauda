@@ -1,5 +1,6 @@
 .quiz-page {
   flex-grow: 1; /* Makes this section grow to use up available space */
+  margin-top: 20px;
   padding: 50px 20px;
   color: white;
   display: flex;
@@ -42,13 +43,15 @@
 }
 
 .quiz-page .question {
-  margin-bottom: 10px; /* Space between question text and buttons */
+  margin-bottom: 20px; /* Increase space between question numbers and the question text */
   text-align: center;
+  font-size: 1.5em; /* Increase font size */
 }
 
 .quiz-page .button-group {
   display: flex;
   justify-content: center; /* Center buttons horizontally */
+  margin-bottom: 20px; /* Add space between answer buttons and navigation buttons */
 }
 
 .quiz-page .answer-button {
@@ -100,4 +103,85 @@
   font-size: 1em;
   color: blue;
   text-decoration: underline;
+}
+
+.quiz-page .question-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.quiz-page .nav-button {
+  padding: 5px 10px; /* Reduce size of numbered question selection buttons */
+  margin: 5px;
+  background-color: #2f4469;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quiz-page .nav-button.active {
+  background-color: orange;
+}
+
+.quiz-page .nav-button.answered {
+  background-color: white;
+  color: black;
+}
+
+.quiz-page .nav-button.unanswered {
+  background-color: grey;
+  color: white;
+}
+
+.quiz-page .nav-button:hover:not(.active) {
+  background-color: #86d786;
+}
+
+.quiz-page .question-container {
+  margin-bottom: 20px;
+}
+
+.quiz-page .navigation-buttons {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 20px; /* Add spacing between buttons */
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 40px; /* Increase space between navigation buttons and answer buttons */
+}
+
+.quiz-page .submit-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.quiz-page .submit-button {
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: white;
+  border: none;
+  cursor: not-allowed;
+  align-self: center;
+}
+
+.quiz-page .submit-button:not(:disabled) {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.quiz-page .answer-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  color: white;
+  background-color: #2f4469;
+  border: 2px solid #1b2c44;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quiz-page .selected {
+  background-color: #86d786;
 }

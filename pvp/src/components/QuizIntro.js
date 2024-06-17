@@ -1,21 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import '../styles/QuizIntro.css';
 import spine from '../assets/spine.png'; // Adjust the path based on where your image is within the src directory
 
 function QuizIntro() {
+  const { t } = useTranslation();
+
   return (
     <div className="quiz-intro">
       <div className="quiz-intro-header">
-        <h1>Ar turiu skoliozę?</h1>
-        <h2>Atlikite testą!</h2>
+        <h1>{t('intro_header')}</h1>
+        <h2>{t('intro_subheader')}</h2>
       </div>
       <div className="quiz-intro-content">
-        <p>
-          Šiame teste matysite gydytojų specialistų užduodamus klausimus konsultacijose.
-          Jums atlikus testą ir užpildžius visus klausimus, bus rodomi rezultatai apie Jūsų GALIMĄ diagnozę.
-          Galėsite rinktis registraciją pas pasirinktą gydytoją specialistą bei pasirinkti norimas mankštas.
-        </p>
+        <p>{t('intro_paragraph')}</p>
       </div>
       <div className="quiz-intro-footer">
         <div className="quiz-intro-image">
@@ -23,7 +22,7 @@ function QuizIntro() {
         </div>
       </div>
       <Link to="/quiz">
-          <button className="start-button">Pradėti</button>
+          <button className="start-button">{t('start_test')}</button>
       </Link>
     </div>
   );

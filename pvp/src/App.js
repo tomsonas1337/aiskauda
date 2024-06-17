@@ -11,6 +11,7 @@ import ArticlesPage from './components/ArticlesPage';
 import ContactsPage from './components/ContactsPage';
 import AboutPage from './components/AboutPage';
 import './styles/Global.css';
+import './i18n'; // Import the i18n configuration
 
 function AnimatedRoutes() {
   const location = useLocation();

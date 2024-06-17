@@ -50,6 +50,19 @@
   z-index: 2000;
 }
 
+.language-switcher button {
+  background-color: #2f4469; /* Matches the main content button color */
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Standard font size for consistency */
+  color: white;
+  padding: 10px 20px; /* Adjusted to match main content button */
+}
+
+.language-switcher button:hover {
+  background-color: #947c2c; /* Keeps the button color consistent on hover, no change */
+}
+
 @media (max-width: 768px) {
   .nav-items {
     position: fixed;

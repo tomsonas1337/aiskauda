@@ -1,8 +1,8 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'; // Adjust the path based on where your image is within the src directory
 import '../styles/Navbar.css';
+import LanguageSwitcher from './LanguageSwitcher';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,6 +34,7 @@ function Navbar() {
       <div className="hamburger" onClick={toggleMobileMenu}>
         ☰
       </div>
+      <LanguageSwitcher /> {/* Add the LanguageSwitcher here */}
     </div>
   );
 }
