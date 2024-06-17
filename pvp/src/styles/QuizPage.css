@@ -124,7 +124,9 @@
 
 .quiz-page .nav-button.active {
   background-color: orange;
+  color: white; /* Ensure text color is white on active button */
 }
+
 
 .quiz-page .nav-button.answered {
   background-color: white;

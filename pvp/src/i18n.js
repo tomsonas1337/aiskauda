@@ -15,6 +15,15 @@ const resources = {
                 "Do you have family members who have been diagnosed with scoliosis?",
                 "Have you recently experienced a rapid growth spurt or noticed changes in your body proportions?"
             ],
+            "exercises": "Exercises",
+            "exercise1": "Exercise 1",
+            "exercise2": "Exercise 2",
+            "exercise3": "Exercise 3",
+            "articles": "Articles",
+            "motusVita": "Motus Vita",
+            "aboutUs": "About Us",
+            "contacts": "Contacts",
+            "quiz": "Quiz",
             "main_content_header": "Don't ignore back pain. Take the test.",
             "reliable_information": "Reliable information",
             "effective_solutions": "Effective solutions",
@@ -23,7 +32,6 @@ const resources = {
             "physiotherapist_consultation": "Physiotherapist consultation",
             "complex_physiotherapy": "Complex physiotherapy",
             "physiotherapy": "Physiotherapy",
-            "exercises": "Exercises",
             "yes": "Yes",
             "no": "No",
             "result_title": "Result:",
@@ -61,7 +69,7 @@ const resources = {
                                 <p>Treatment for scoliosis depends on the severity of the curve and the risk of it worsening. Mild scoliosis may require only regular check-ups, while more severe cases may need bracing or surgery. Common treatments include:</p>
                                 <ul>
                                     <li><strong>Bracing:</strong> For moderate scoliosis, bracing can help prevent further curvature, especially in children who are still growing.</li>
-                                    <li><strong>Physical Therapy:</strong> Exercises can help strengthen the muscles supporting the spine, improve posture, and reduce pain.</li>
+                                    <li><strong>Physical Therapy:</strong> Exercises can help strengthen the muscles that support the spine, improve posture, and reduce pain.</li>
                                     <li><strong>Surgery:</strong> Severe scoliosis may require spinal fusion surgery to straighten and stabilize the spine.</li>
                                 </ul>
                                 <p>Early detection is crucial for effective management of scoliosis. Regular visits to a healthcare provider are important for monitoring and managing scoliosis.</p>`,
@@ -70,14 +78,14 @@ const resources = {
             "article_2_content": `<h3>Posture and Back Health</h3>
                                 <p>Good posture is essential for maintaining a healthy back and avoiding pain. Proper body alignment reduces the strain on the spine and minimizes the risk of injury.</p>
                                 <h4>The Importance of Good Posture</h4>
-                                <p>Maintaining good posture is important for:</p>
+                                <p>Maintaining a good posture is important for:</p>
                                 <ul>
                                     <li>Keeping bones and joints in the correct alignment so that muscles are used properly</li>
                                     <li>Preventing fatigue because muscles are used more efficiently</li>
                                     <li>Reducing strain on ligaments that hold the spine joints together</li>
                                     <li>Preventing muscle strain, overuse disorders, and even back and muscular pain</li>
                                 </ul>
-                                <h4>Tips for Maintaining Good Posture</h4>
+                                <h4>Tips for Maintaining A Good Posture</h4>
                                 <p>Here are some tips for maintaining good posture:</p>
                                 <ul>
                                     <li><strong>Standing:</strong> Stand upright with your shoulders back, and weight evenly distributed on both feet.</li>
@@ -119,7 +127,7 @@ const resources = {
                 "Ar pastebite nelygumą pečių aukštyje žiūrėdami į veidrodį?",
                 "Ar matote akivaizdų išlinkimą nugaros srityje pasilenkus?",
                 "Ar jaučiate nugaros skausmą, ypač vienoje kūno pusėje?",
-                "Ar jūsų drabužiai dėvisi nevienodai vienoje kūno pusėje lyginant su kita?",
+                "Ar jūsų drabužiai nevienodai gula vienoje kūno pusėje lyginant su kita?",
                 "Ar pastebėjote, kad vienas klubas atrodo aukštesnis nei kitas?",
                 "Ar pastebite simetrijos trūkumą juosmens srityje?",
                 "Ar jaučiate standumą ar diskomfortą nugaroje, ypač po ilgo sėdėjimo ar stovėjimo?",
@@ -127,6 +135,15 @@ const resources = {
                 "Ar turite šeimos narių, kurie turi diagnozuotą skoliozę?",
                 "Ar neseniai patyrėte greitą ūgio augimą ar pastebėjote pokyčius savo kūno proporcijose?"
             ],
+            "exercise1": "Mankšta 1",
+            "exercise2": "Mankšta 2",
+            "exercise3": "Mankšta 3",
+            "articles": "Straipsniai",
+            "exercises": "Mankštos",
+            "motusVita": "Motus Vita",
+            "aboutUs": "Apie Mus",
+            "contacts": "Kontaktai",
+            "quiz": "Testas",
             "main_content_header": "Nenumokite ranka į nugaros skausmus. Atlikite testą.",
             "reliable_information": "Patikima informacija",
             "effective_solutions": "Efektyvūs sprendimai",
@@ -135,7 +152,6 @@ const resources = {
             "physiotherapist_consultation": "Kineziterapeuto konsultacija",
             "complex_physiotherapy": "Kompleksinė kineziterapija",
             "physiotherapy": "Fizioterapija",
-            "exercises": "Mankštos",
             "yes": "Taip",
             "no": "Ne",
             "result_title": "Rezultatas:",
@@ -163,7 +179,7 @@ const resources = {
                                 <p>Skoliozė yra medicininė būklė, kai žmogaus stuburas turi šoninį išlinkimą. Kreivė paprastai yra "S" arba "C" formos. Kreivumo laipsnis gali skirtis, tačiau daugiau nei 10 laipsnių kreivumas paprastai laikomas skolioze.</p>
                                 <h4>Simptomai</h4>
                                 <ul>
-                                    <li>Nelygios pečiai</li>
+                                    <li>Nelygūs pečiai</li>
                                     <li>Viena mentė atrodo labiau iškilusi nei kita</li>
                                     <li>Nelygus liemuo</li>
                                     <li>Vienas klubas aukščiau nei kitas</li>
@@ -176,21 +192,21 @@ const resources = {
                                     <li><strong>Fizinė terapija:</strong> Pratimai gali padėti sustiprinti stuburo raumenis, pagerinti laikyseną ir sumažinti skausmą.</li>
                                     <li><strong>Operacija:</strong> Sunkiems skoliozės atvejams gali prireikti stuburo suliejimo operacijos, kad stuburas būtų ištiesintas ir stabilizuotas.</li>
                                 </ul>
-                                <p>Ankstyvas nustatymas yra labai svarbus efektyviam skoliozės valdymui. Reguliarūs vizitai pas sveikatos priežiūros specialistą yra svarbūs skoliozės stebėjimui ir valdymui.</p>`,
+                                <p>Ankstyvas nustatymas ir reguliarūs vizitai pas sveikatos priežiūros specialistą yra svarbūs skoliozės stebėjimui ir valdymui.</p>`,
             "article_2_title": "Laikysena ir nugaros sveikata",
             "article_2_summary": "Sužinokite, kaip gera laikysena gali užkirsti kelią nugaros problemoms.",
             "article_2_content": `<h3>Laikysena ir nugaros sveikata</h3>
-                                <p>Gera laikysena yra būtina norint išlaikyti sveiką nugarą ir išvengti skausmo. Tinkamas kūno išlyginimas sumažina stuburo apkrovą ir sumažina sužalojimų riziką.</p>
+                                <p>Gera laikysena yra būtina norint išlaikyti sveiką nugarą ir išvengti skausmo. Taisyklinga laikysena sumažina stuburo apkrovą ir sumažina sužalojimų riziką.</p>
                                 <h4>Geros laikysenos svarba</h4>
-                                <p>Geros laikysenos palaikymas yra svarbus:</p>
+                                <p>Geros laikysenos puoselėjimas yra svarbus:</p>
                                 <ul>
                                     <li>Kad kaulai ir sąnariai būtų tinkamai išdėstyti, kad raumenys būtų tinkamai naudojami</li>
                                     <li>Nuovargio prevencijai, nes raumenys naudojami efektyviau</li>
-                                    <li>Įtampai mažinti ant raiščių, kurie laikosi stuburo sąnarių kartu</li>
+                                    <li>Raisčių, kurie laiko stuburo sąnarius kartu, įtampai mažinti</li>
                                     <li>Raumenų įtampos, per didelio naudojimo sutrikimų ir net nugaros bei raumenų skausmo prevencijai</li>
                                 </ul>
-                                <h4>Patarimai gerai laikysenai palaikyti</h4>
-                                <p>Štai keletas patarimų, kaip palaikyti gerą laikyseną:</p>
+                                <h4>Patarimai gerai laikysenai išsaugoti</h4>
+                                <p>Štai keletas patarimų, kaip išlaikyti gerą laikyseną:</p>
                                 <ul>
                                     <li><strong>Stovint:</strong> Stovėkite tiesiai su pečiais atgal, svoris tolygiai paskirstytas ant abiejų kojų.</li>
                                     <li><strong>Sėdint:</strong> Sėdėkite tiesiai su pečiais atgal, naudodamiesi kėdės atrama nugarai.</li>
@@ -207,14 +223,14 @@ const resources = {
                                     <li><strong>Dubens pasvirimai:</strong> Atsigulkite ant nugaros su sulenktais keliais ir pėdomis plokščiai ant grindų. Įtempkite pilvo raumenis ir suplokštinkite nugarą ant grindų. Laikykite kelias sekundes, tada atsipalaiduokite. Kartokite 10-15 kartų.</li>
                                     <li><strong>Katės-karvės tempimas:</strong> Atsiklaupkite ant rankų ir kelių. Išlinkite nugarą link lubų (katės poza), tada lėtai nuleiskite nugarą, leisdami pilvui nusileisti link grindų (karvės poza). Kartokite 10-15 kartų.</li>
                                     <li><strong>Paukštis-šuo:</strong> Atsiklaupkite ant rankų ir kelių. Ištieskite vieną ranką tiesiai priešais save ir priešingą koją tiesiai atgal. Laikykite kelias sekundes, tada grįžkite į pradinę padėtį. Kartokite kitą pusę. Darykite 10-15 pakartojimų kiekvienoje pusėje.</li>
-                                    <li><strong>Priklausimai prie sienos:</strong> Atsistokite nugarą prie sienos ir lėtai nusileiskite į sėdėjimo padėtį, tarsi sėdėtumėte kėdėje. Laikykite kuo ilgiau, tada lėtai vėl pakilkite. Kartokite 5-10 kartų.</li>
+                                    <li><strong>Kėdutė:</strong> Atsistokite nugarą prie sienos ir lėtai nusileiskite į sėdėjimo padėtį, tarsi sėdėtumėte kėdėje. Laikykite kuo ilgiau, tada lėtai vėl pakilkite. Kartokite 5-10 kartų.</li>
                                 </ul>
                                 <h4>Nauda</h4>
                                 <p>Šie pratimai padeda sustiprinti raumenis, palaikančius stuburą, pagerina lankstumą ir sumažina skausmą. Įtraukus šiuos pratimus į savo kasdienę rutiną, galite padėti išlaikyti sveiką stuburą ir išvengti nugaros problemų.</p>
-                                <p>Visada pasitarkite su sveikatos priežiūros specialistu prieš pradedant naują pratimų programą, ypač jei turite esamų nugaros problemų ar kitų sveikatos problemų.</p>`,
+                                <p>Visada pasitarkite su sveikatos priežiūros specialistu prieš pradedami naują pratimų programą, ypač jei turite esamų nugaros ar kitų sveikatos problemų</p>`,
             // New translations for AboutPage
             "about_page_title": "Apie mus",
-            "about_page_description": "Mes esame KTU trečiojo kurso studentai, ir ši svetainė yra mūsų produkto vystymo projektas. Mūsų tikslas - padėti žmonėms skleisdami žinią apie skoliozę ir jos padarinius, nes jos atvejų skaičius sparčiai auga.",
+            "about_page_description": "Mes esame KTU trečiojo kurso studentai, ir ši svetainė yra mūsų produkto vystymo projektas. Mūsų tikslas - padėti žmonėms skleidžiant žinią apie skoliozę ir jos padarinius, nes jos atvejų skaičius sparčiai auga.",
             "contact_us": "Susisiekite su mumis",
             "our_office": "Mūsų biuras",
             "office_address": "A. Mickevičiaus g. 37, Kaunas, 44244 Kauno m. sav. 110a-110b kab.",

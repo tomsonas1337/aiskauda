@@ -98,6 +98,7 @@ function QuizPage() {
               type="button"
               className={`nav-button ${currentQuestionIndex === index ? 'active' : ''} ${answers[index] !== null ? 'answered' : 'unanswered'}`}
               onClick={() => navigateToQuestion(index)}
+              style={currentQuestionIndex === index ? { backgroundColor: 'orange' } : {}}
             >
               {index + 1}
             </button>

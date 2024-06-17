@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'; // Adjust the path based on where your image is within the src directory
 import '../styles/Navbar.css';
 import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 function Navbar() {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Function to close mobile menu
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
@@ -22,19 +23,19 @@ function Navbar() {
         <img src={logo} alt="AI Skauda Logo" className="navbar-logo" />
       </Link>
       <div className={`nav-items ${isMobileMenuOpen ? 'open' : ''}`}>
-        <Link to="/articles" onClick={closeMobileMenu}>Straipsniai</Link>
-        <Link to="/exercises" onClick={closeMobileMenu}>Mankštos</Link>
-        <a href="https://www.motusvita.lt/" onClick={closeMobileMenu} target="_blank" rel="noopener noreferrer">Motus Vita</a> 
-        <Link to="/about" onClick={closeMobileMenu}>Apie Mus</Link>
-        <Link to="/contacts" onClick={closeMobileMenu}>Kontaktai</Link>
+        <Link to="/articles" onClick={closeMobileMenu}>{t('articles')}</Link>
+        <Link to="/exercises" onClick={closeMobileMenu}>{t('exercises')}</Link>
+        <a href="https://www.motusvita.lt/" onClick={closeMobileMenu} target="_blank" rel="noopener noreferrer">{t('motusVita')}</a>
+        <Link to="/about" onClick={closeMobileMenu}>{t('aboutUs')}</Link>
+        <Link to="/contacts" onClick={closeMobileMenu}>{t('contacts')}</Link>
         <Link to="/quiz-intro" className="nav-button-link" onClick={closeMobileMenu}>
-          <button>Testas</button>
+          <button>{t('quiz')}</button>
         </Link>
+        <LanguageSwitcher /> {/* Moved the LanguageSwitcher here */}
       </div>
       <div className="hamburger" onClick={toggleMobileMenu}>
         ☰
       </div>
-      <LanguageSwitcher /> {/* Add the LanguageSwitcher here */}
     </div>
   );
 }
